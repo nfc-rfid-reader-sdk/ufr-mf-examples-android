@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_picture"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_weight="0"
+        android:gravity="right">
+
+        <TextView
+            android:id="@+id/siteLogo"
+            android:layout_width="190dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/logo_top"
+            android:gravity="center"
+            android:paddingTop="15dp"
+            android:paddingBottom="12dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="0dp"
+        android:layout_weight="0"
+        android:gravity="left">
+
+        <Button
+            android:id="@+id/btnReaderOpen"
+            android:layout_width="130dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/reader_open_pattern"
+            android:gravity="center" />
+
+        <CheckBox
+            android:id="@+id/checkBoxUseAdvanced"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0"
+            android:baselineAligned="true"
+            android:text="Use Advanced options"
+            android:buttonTint="#8fc743" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/advancedLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/container1"
+        android:orientation="vertical"
+        android:padding="0dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:orientation="horizontal"
+            android:padding="0dp">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Reader type:"
+                android:textSize="12sp"/>
+
+            <EditText
+                android:id="@+id/readerTypeET"
+                android:layout_width="45dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/small_input"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textSize="12sp"
+                android:textCursorDrawable="@null"
+                android:enabled="false"/>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Port name:"
+                android:textSize="12sp"/>
+
+            <EditText
+                android:id="@+id/portNameET"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/medium_input"
+                android:gravity="center"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textSize="12sp"
+                android:textCursorDrawable="@null"
+                android:enabled="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:orientation="horizontal"
+            android:padding="0dp">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Interface:"
+                android:textSize="12sp"/>
+
+            <EditText
+                android:id="@+id/portInterfaceET"
+                android:layout_width="45dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/small_input"
+                android:gravity="center"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textSize="12sp"
+                android:textCursorDrawable="@null"
+                android:enabled="false"/>
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Arg:"
+                android:textSize="12sp"/>
+
+            <EditText
+                android:id="@+id/argET"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/medium_input"
+                android:gravity="center"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textSize="12sp"
+                android:textCursorDrawable="@null"
+                android:enabled="false"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/container1"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:orientation="horizontal"
+            android:padding="0dp">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="UID size:"
+                android:textSize="12sp"/>
+
+            <EditText
+                android:id="@+id/uidSizeET"
+                android:layout_width="45dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/small_input"
+                android:gravity="center"
+                android:inputType="none"
+                android:enabled="false"
+                android:maxLines="1"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Card UID:"
+                android:textSize="12sp"/>
+
+            <EditText
+                android:id="@+id/cardUIDET"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/medium_input"
+                android:gravity="center"
+                android:inputType="none"
+                android:enabled="false"
+                android:maxLines="1"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:orientation="horizontal"
+            android:padding="0dp">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Card type:"
+                android:textSize="12sp"/>
+
+            <EditText
+                android:id="@+id/cardTypeET"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/medium_input"
+                android:gravity="center"
+                android:inputType="none"
+                android:enabled="false"
+                android:maxLines="1"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnFormatCard"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/format_card_pattern"
+                android:gravity="center"
+                android:scaleType="centerInside"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="260dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/container1"
+        android:orientation="horizontal"
+        android:padding="0dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+            <EditText
+                android:id="@+id/linearReadET"
+                android:layout_width="150dp"
+                android:layout_height="185dp"
+                android:layout_weight="1"
+                android:inputType="textMultiLine"
+                android:enabled="false"
+                android:background="@drawable/large_input"
+                android:gravity="top|left"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnLinearRead"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/linear_read_pattern" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+            <EditText
+                android:id="@+id/linearWriteET"
+                android:layout_width="150dp"
+                android:layout_height="185dp"
+                android:layout_weight="1"
+                android:background="@drawable/large_input"
+                android:gravity="top|left"
+                android:textSize="12sp"
+                android:textCursorDrawable="@null"
+                android:inputType="text|textMultiLine|textCapSentences" />
+
+            <Button
+                android:id="@+id/btnLinearWrite"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/linear_write_pattern" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#CCC"
+        android:paddingTop="1dp"
+        android:stretchColumns="2"
+        android:id="@+id/tlTable01">
+        <TableRow
+            android:background="#CCC"
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp">
+            <TextView
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:text="Function status"
+                android:textSize="10sp"/>
+            <TextView
+                android:id="@+id/funcStatusValue"
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:gravity="center"
+                android:text=""
+                android:textSize="10sp"/>
+            <TextView
+                android:id="@+id/functionStatus"
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:gravity="center"
+                android:text=""
+                android:textSize="10sp"/>
+        </TableRow>
+        <TableRow
+            android:background="#CCC"
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp">
+            <TextView
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:text="Card status"
+                android:textSize="10sp"/>
+            <TextView
+                android:id="@+id/cardStatusValue"
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:gravity="center"
+                android:text=""
+                android:textSize="10sp"/>
+            <TextView
+                android:id="@+id/cardStatus"
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:gravity="center"
+                android:text=""
+                android:textSize="10sp"/>
+        </TableRow>
+        <TableRow
+            android:background="#CCC"
+            android:paddingBottom="1dp"
+            android:paddingRight="1dp">
+            <TextView
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:text="Connection"
+                android:textSize="10sp"/>
+            <TextView
+                android:id="@+id/connValue"
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:gravity="center"
+                android:text=""
+                android:textSize="10sp"/>
+            <TextView
+                android:id="@+id/connectionStatus"
+                android:layout_marginLeft="1dp"
+                android:padding="5dp"
+                android:background="#FFF"
+                android:gravity="center"
+                android:text=""
+                android:textSize="10sp"/>
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
