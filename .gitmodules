@@ -1,3 +1,0 @@
-[submodule "uFRSimplest/app/ufr-lib"]
-	path = uFRSimplest/app/lib
-	url = https://git.d-logic.net/nfc-rfid-reader-sdk/ufr-lib.git
